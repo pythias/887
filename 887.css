@@ -1,0 +1,11 @@
+.story {
+    width: 300px;
+    overflow: hidden;
+    margin:0;
+    padding-bottom: 5px;
+}
+
+.story img {
+    display:block;
+    width: 100%;
+}
