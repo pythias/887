@@ -18,5 +18,11 @@
 
 ## 话题
 
-- [每日话题](topic.md)
-- [Hit Extra](extra.md)
+<div class="category">
+    <ul>
+        {% for category in site.categories %}
+        {% assign category_name = category[0] %}
+        <li><a href="{{site.baseurl}}/{{ category[0] }}">{{ site.data.names[category_name] }}</a><span>({{ category[1].size }})</span></li>
+        {% endfor %}
+    </ul>
+</div>

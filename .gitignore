@@ -20,3 +20,9 @@ nbproject
 Thumbs.db
 .vscode
 .idea
+
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata

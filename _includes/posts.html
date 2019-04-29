@@ -1,0 +1,7 @@
+## {{ site.data.names[include.category_name] }}
+
+{% for post in site.categories[include.category_name] %}
+<article class="archive-item">
+    <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title_full}}</a></h4>
+</article>
+{% endfor %}
