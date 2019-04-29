@@ -20,5 +20,3 @@
 
 - [每日话题](topic.md)
 - [Hit Extra](extra.md)
-
-*内容摘自Hit FM，不代表个人和Hit FM观点*
