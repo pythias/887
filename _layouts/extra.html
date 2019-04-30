@@ -3,12 +3,11 @@ layout: default
 ---
 
 <article class="extra">
-
     {% if page.picture %}
-    <img src="{{ page.picture }}" alt="Photo of a {{ page.title | downcase }}">
+    <img src="{{ page.picture }}" alt="{{ page.title | downcase }}">
     {% endif %}
 
-    <h2> {{ page.title }}</h2>
+    <h2>{{ page.date | date_to_string }} - {{ page.title }}</h2>
 
     <div>
         {{ content }}
@@ -17,6 +16,5 @@ layout: default
     {% if page.audio %}
     <audio src="{{ page.audio }}" title="{{ page.title }}" controls></audio>
     {% endif %}
-
 </article>
 

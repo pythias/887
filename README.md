@@ -4,20 +4,25 @@
 
 ## 互动
 
-- 2018-11 多多生日祝福
+{% for story in site.stories %}
+- [{{ story.date | date_to_string }} - {{ story.title }}]({{ story.url }})
+{% if site.story_full %}
+{% if story.audio %}
+    <audio src="{{ story.audio }}" title="{{ story.title }}" controls></audio>
+{% endif %}
 
-    <audio src="/assets/audios/20181109.aac" title="多多生日祝福" controls></audio>
-
-- 2019-04 中秋离职祝福
-
-    <audio src="/assets/audios/20190417.aac" title="中秋离职祝福" controls></audio>
-
-- 2019-04 复仇者联盟4观影团
-
-    ![节奏当道](/assets/images/20190423-3.jpg)
+{% if story.pictures %}
+{% assign picture = story.pictures | first %}
+    ![{{ picture.name }}]({{ picture.url }})
+{% endif %}
+{% endif %}
+{% endfor %}
 
 ## 每日话题
 
+{% for topic in site.topics %}
+- [{{ topic.date | date_to_string }} - {{ topic.title }}]({{ topic.url }})
+{% endfor %}
 
 ## Hit Extra
 

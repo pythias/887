@@ -2,11 +2,7 @@
 layout: default
 ---
 
-<article class="topic">
-    {% if page.picture %}
-    <img src="{{ page.picture }}" alt="{{ page.title | downcase }}">
-    {% endif %}
-
+<article class="story">
     <h2>{{ page.date | date_to_string }} - {{ page.title }}</h2>
 
     <div>
@@ -17,12 +13,11 @@ layout: default
     <audio src="{{ page.audio }}" title="{{ page.title }}" controls></audio>
     {% endif %}
 
-    {% if page.views %}
-    <ul>
-        {% for view in page.views %}
-        <li>
-            <strong>{{ view.name }}：</strong>{{ view.content }}
-        </li>
+    {% if page.pictures %}
+        {% for picture in page.pictures %}
+        <p>
+            <img src="{{ picture.url }}" alt="{{ picture.name }}">
+        </p>
         {% endfor %}
     </ul>
     {% endif %}
