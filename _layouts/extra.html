@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<article class="extra">
+
+    {% if page.picture %}
+    <img src="{{ page.picture }}" alt="Photo of a {{ page.title | downcase }}">
+    {% endif %}
+
+    <h2> {{ page.title }}</h2>
+
+    <div>
+        {{ content }}
+    </div>
+
+    {% if page.audio %}
+    <audio src="{{ page.audio }}" title="{{ page.title }}" controls></audio>
+    {% endif %}
+
+</article>
+

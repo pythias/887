@@ -1,7 +1,11 @@
 title: 我和Hit FM的故事
 google_analytics: UA-10976235-10
 layout: default
-categories: [extra, topic]
-permalink: date "/:year/:month/:day/:title.html"
-permalink: pretty "/:year/:month/:day/:title/"
-permalink: "/:title"
+
+collections:
+  extras:
+    output: true
+    permalink: /extra/:name
+  topics:
+    output: true
+    permalink: /topic/:name

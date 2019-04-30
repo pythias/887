@@ -16,13 +16,11 @@
 
     ![节奏当道](/assets/images/20190423-3.jpg)
 
-## 话题
+## 每日话题
 
-<div class="category">
-    <ul>
-        {% for category in site.categories %}
-        {% assign category_name = category[0] %}
-        <li><a href="{{site.baseurl}}/{{ category[0] }}">{{ site.data.names[category_name] }}</a><span>({{ category[1].size }})</span></li>
-        {% endfor %}
-    </ul>
-</div>
+
+## Hit Extra
+
+{% for extra in site.extras %}
+- [{{ extra.date | date_to_string }} - {{ extra.title }}]({{ extra.url }})
+{% endfor %}
