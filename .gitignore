@@ -27,3 +27,4 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 .now
+Gemfile.lock
