@@ -8,7 +8,8 @@ title: 首页
 
 ## 互动
 
-{% for story in site.stories %}
+{% assign stories = site.stories | sort: "date" | reverse %}
+{% for story in stories %}
 - [{{ story.date | date_to_string }} - {{ story.title }}]({{ story.url }})
 {% if site.story_full %}
 {% if story.audio %}
