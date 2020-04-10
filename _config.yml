@@ -8,10 +8,10 @@ description: Hit FM互动摘录
 collections:
   extras:
     output: true
-    permalink: /extra/:name
+    permalink: /extra/:name.html
   topics:
     output: true
-    permalink: /topic/:name
+    permalink: /topic/:name.html
   stories:
     output: true
-    permalink: /story/:name
+    permalink: /story/:name.html
